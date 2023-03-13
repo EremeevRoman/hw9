@@ -30,13 +30,13 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int maxSum = 99999;
+        int maxSum = Integer.MIN_VALUE;
         for (final int current : arr) {
             if (current > maxSum) {
                 maxSum = current;
             }
         }
-        int minSum = 200001;
+        int minSum = Integer.MAX_VALUE;
         for (final int current : arr) {
             if (current < minSum) {
                 minSum = current;
@@ -50,9 +50,9 @@ public class Main {
         int[] arr = generateRandomArray();
         int sum = 0;
         for (int element : arr) {
-            sum = sum + element;
-        }
-        double medSum = sum / 30;
+            sum = sum + element;}
+
+        float medSum = sum / 30f;
 
         System.out.println("Средняя сумма трат за месяц составила " + medSum + " рублей.");
     }
